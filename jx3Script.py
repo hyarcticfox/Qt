@@ -1,39 +1,35 @@
 import sys, os
 if hasattr(sys, 'frozen'):
     os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog
 from MainWin import *
+from Script import *
 
 class MainWindow(QMainWindow,Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
+        """
+       
+        self.Note()
 
-        self.pushButtonAX.clicked.connect(self.AXScript)
-        self.pushButtonCJ.clicked.connect(self.CJScript)
-        self.pushButtonJC.clicked.connect(self.JCScript)
-        self.pushButtonBD.clicked.connect(self.BDScript)
-        self.pushButtonFS.clicked.connect(self.FSScript)
-        self.pushButtonCYT.clicked.connect(self.CYTScript)
-        self.pushButtonJY.clicked.connect(self.JYScript)
-        self.pushButtonGB.clicked.connect(self.GBScript)
-        self.pushButtonTCT.clicked.connect(self.TCTScript)
-        self.pushButtonYJ.clicked.connect(self.YJScript)
-        self.pushButtonHST.clicked.connect(self.HSTScript)
-        self.pushButtonBX.clicked.connect(self.BXScript)
-        self.pushButtonHJ.clicked.connect(self.HJScript)
-        self.pushButtonFY.clicked.connect(self.FYScript)
-        self.pushButtonMJT.clicked.connect(self.MJTScript)
-        self.pushButtonDJ.clicked.connect(self.DJScript)
-        self.pushButtonQC.clicked.connect(self.QCScript)
-        self.pushButtonTL.clicked.connect(self.TLScript)
+
+
+"""
+    def Note(self):
+        self.textBrowser.append("宏仅供参考，避风塘团内使用，暂勿传播，暂时没找到好用的蓬莱宏、莫问宏")
+
+class ScriptWindow(QDialog, Ui_Script):
+    def __init__(self):
+        super(ScriptWindow, self).__init__()
+        self.setupUi(self)
         self.pushButtonCopy_1.clicked.connect(self.ScriptCopy1)
         self.pushButtonCopy_2.clicked.connect(self.ScriptCopy2)
         self.pushButtonCopy_3.clicked.connect(self.ScriptCopy3)
-        self.Note()
     def AXScript(self):
+        self.show()
         self.textEditScript1.clear()
-        self.textEditScript1.append("/cast 撼如雷")
+        self.textEditScript1.append("/cast [nobuff:激雷] 撼如雷")
         self.textEditScript1.append("/cast [rage<3|bufftime:破楼兰<1.5] 灭")
         self.textEditScript1.append("/cast [rage<4|tnobuff:流血|tbufftime:流血<3] 龙吟")
         self.textEditScript1.append("/cast [rage=5] 龙牙")
@@ -47,6 +43,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def JCScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 人剑合一")
         self.textEditScript1.append("/cast [qidian>8] 无我无剑")
@@ -74,6 +71,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def CJScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [buff:夜雨] 云飞玉皇")
         self.textEditScript1.append("/cast [buff:夜雨&rage>50|rage<45] 松舍问霞")
@@ -81,7 +79,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditScript1.append("/cast 夕照雷峰")
         self.textEditScript1.append("/cast 听雷")
         self.textEditInstruct1.clear()
-        self.textEditInstruct1.append("造化宏")
+        self.textEditInstruct1.append("懒人造化宏，进阶请删掉所有带听雷语句")
 
         self.textEditScript2.clear()
         self.textEditScript2.append("/cast [buff:凤鸣] 松舍问霞")
@@ -95,6 +93,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def BDScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 雷走风切")
         self.textEditScript1.append("/cast 上将军印")
@@ -127,6 +126,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 
 
     def FSScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [nobuff:血怒] 血怒")
         self.textEditScript1.append("/cast [rage>30&tbuff:流血] 盾猛")
@@ -149,6 +149,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def CYTScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [tnobuff:流血&buff:寒甲&rage>15] 盾飞")
         self.textEditScript1.append("/cast [rage>99&nobuff:盾档] 盾挡")
@@ -169,6 +170,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def JYScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [tnobuff: 穿心 | tbufftime: 穿心 < 3] 穿心弩")
         self.textEditScript1.append("/fcast 暴雨梨花针")
@@ -184,6 +186,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def GBScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 酒中仙")
         self.textEditScript1.append("/cast 潜龙勿用")
@@ -200,6 +203,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def TCTScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [life<0.2] 啸如虎")
         self.textEditScript1.append("/cast [tnobuff:破风] 龙吟")
@@ -216,6 +220,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def YJScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [qidian>2] 罗汉金身")
         self.textEditScript1.append("/cast [qidian>2] 拿云式")
@@ -237,6 +242,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def HSTScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 擒龙诀")
         self.textEditScript1.append("/cast [qidian>2] 韦陀献杵")
@@ -254,6 +260,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def BXScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [buff:枕上=5] 繁音急节")
         self.textEditScript1.append("/fcast [tbufftime:急曲<2|tbuff:急曲<3|tnobuff:急曲] 剑破虚空")
@@ -266,6 +273,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def HJScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [tnobuff:兰摧玉折] 兰摧玉折")
         self.textEditScript1.append("/cast [tnobuff:钟林毓秀&tbufftime:商阳指>16.6] 钟林毓秀")
@@ -280,6 +288,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def FYScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 净世破魔击")
         self.textEditScript1.append("/cast [sun<22&moon<35] 银月斩")
@@ -295,6 +304,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def MJTScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 心火叹")
         self.textEditScript1.append("/cast 生死劫")
@@ -312,6 +322,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def DJScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast [tnobuff:蛇影|tbufftime:蛇影<=2] 蛇影")
         self.textEditScript1.append("/cast 蛊虫献祭")
@@ -330,6 +341,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def QCScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/fcast [nobuff:破苍穹] 破苍穹")
         self.textEditScript1.append("/cast [nobuff:气剑|bufftime:气剑<1.7] 万世不竭")
@@ -345,6 +357,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.textEditInstruct3.clear()
 
     def TLScript(self):
+        self.show()
         self.textEditScript1.clear()
         self.textEditScript1.append("/cast 暗藏杀机")
         self.textEditScript1.append("/cast [tnobuff:化血|tbufftime:化血<6] 天女散花")
@@ -371,12 +384,29 @@ class MainWindow(QMainWindow,Ui_MainWindow):
     def ScriptCopy3(self):
         self.textEditScript3.selectAll()
         self.textEditScript3.copy()
-
-    def Note(self):
-        self.textBrowser.append("宏仅供参考，避风塘团内使用，暂勿传播，暂时没找到好用的蓬莱宏、莫问宏")
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    myWin = MainWindow()
-    myWin.show()
+    mainWin = MainWindow()
+    scriptWin = ScriptWindow()
+    mainWin.show()
+
+    mainWin.pushButtonAX.clicked.connect(scriptWin.AXScript)
+    mainWin.pushButtonCJ.clicked.connect(scriptWin.CJScript)
+    mainWin.pushButtonJC.clicked.connect(scriptWin.JCScript)
+    mainWin.pushButtonBD.clicked.connect(scriptWin.BDScript)
+    mainWin.pushButtonFS.clicked.connect(scriptWin.FSScript)
+    mainWin.pushButtonCYT.clicked.connect(scriptWin.CYTScript)
+    mainWin.pushButtonJY.clicked.connect(scriptWin.JYScript)
+    mainWin.pushButtonGB.clicked.connect(scriptWin.GBScript)
+    mainWin.pushButtonTCT.clicked.connect(scriptWin.TCTScript)
+    mainWin.pushButtonYJ.clicked.connect(scriptWin.YJScript)
+    mainWin.pushButtonHST.clicked.connect(scriptWin.HSTScript)
+    mainWin.pushButtonBX.clicked.connect(scriptWin.BXScript)
+    mainWin.pushButtonHJ.clicked.connect(scriptWin.HJScript)
+    mainWin.pushButtonFY.clicked.connect(scriptWin.FYScript)
+    mainWin.pushButtonMJT.clicked.connect(scriptWin.MJTScript)
+    mainWin.pushButtonDJ.clicked.connect(scriptWin.DJScript)
+    mainWin.pushButtonQC.clicked.connect(scriptWin.QCScript)
+    mainWin.pushButtonTL.clicked.connect(scriptWin.TLScript)
+
     sys.exit(app.exec_())
