@@ -1,0 +1,21 @@
+通过继承类解决pyqt5中由qtdesigner的ui文件生成的python文件难以修改问题，方便自己添加代码，实现业务与逻辑分离
+
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from MainWin import *
+class MainWindow(QMainWindow,Ui_MainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.setupUi(self)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWin = MainWindow()
+    myWin.show()
+    sys.exit(app.exec_())
+    
+打包后提示 ImportError: unable to find Qt5Core.dll on PATH
+有的版本pyqt5库对系统变量的加载存在bug，
+对有bug的版本库提供一种办法就是，在主程序中pyqt5库import之前就对系统变量进行手动设置，import代码如下：
+import sys, os
+if hasattr(sys, 'frozen'):
+    os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']    
