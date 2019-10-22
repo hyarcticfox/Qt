@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>603</width>
-    <height>447</height>
+    <width>598</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
      <x>320</x>
      <y>40</y>
      <width>141</width>
-     <height>381</height>
+     <height>401</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -65,8 +65,8 @@
     <rect>
      <x>50</x>
      <y>40</y>
-     <width>211</width>
-     <height>381</height>
+     <width>251</width>
+     <height>401</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -92,6 +92,29 @@
    </property>
    <property name="text">
     <string>复制</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textTalent">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>470</y>
+     <width>501</width>
+     <height>121</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>450</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>奇穴：</string>
    </property>
   </widget>
  </widget>

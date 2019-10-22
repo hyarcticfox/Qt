@@ -42,6 +42,8 @@ class ScriptWindow(QDialog, Ui_Script):
         self.textEditInstruct2.clear()
         self.textEditInstruct3.clear()
 
+        self.textTalent.clear()
+        self.textTalent.append("[扬戈],[神勇],[徐如林],[击水],[劲风],[风虎],[破楼兰],[战心],[牧云],[激雷],[龙血],[虎贲]")
     def JCScript(self):
         self.show()
         self.textEditScript1.clear()
@@ -70,6 +72,10 @@ class ScriptWindow(QDialog, Ui_Script):
         self.textEditInstruct2.append("无意混子一键宏")
         self.textEditInstruct3.clear()
 
+        self.textTalent.clear()
+        self.textTalent.append("云中剑：[心固],[深埋],[昆吾],[云中剑],[风逝],[叠刃],[长生],[负阴],[和光],[期声],[无欲],[玄门]")
+        self.textTalent.append("无意流：[心固],[深埋],[昆吾],[无意],[风逝],[叠刃],[切玉],[负阴],[和光],[期声],[无欲],[玄门]")
+        self.textTalent.append("第三个奇穴如果缺蓝洗化三清，群攻洗白虹")
     def CJScript(self):
         self.show()
         self.textEditScript1.clear()
@@ -217,6 +223,32 @@ class ScriptWindow(QDialog, Ui_Script):
         self.textEditInstruct1.clear()
         self.textEditInstruct1.append("手动沧月，山，风")
         self.textEditInstruct2.clear()
+        self.textEditInstruct3.clear()
+
+    def PLScript(self):
+        self.show()
+        self.textEditScript1.clear()
+        self.textEditScript1.append("/fcast 翼绝云天")
+        self.textEditScript1.append("/cast 振翅图南")
+        self.textEditScript1.append("/cast [buff:梦悠&skill_energy:物化天行>0] 浮游天地")
+        self.textEditScript1.append("/cast 木落雁归")
+        self.textEditScript1.append("/cast 跃潮斩波")
+        self.textEditScript1.append("/cast 击水三千")
+
+        self.textEditScript2.clear()
+        self.textEditScript2.append("/fcast 翼绝云天")
+        self.textEditScript2.append("/cast 振翅图南")
+        self.textEditScript2.append("/cast 物化天行")
+        self.textEditScript2.append("/cast 海运南冥")
+        self.textEditScript2.append("/cast 溟海御波")
+        self.textEditScript2.append("/cast 逐波灵游")
+        self.textEditScript2.append("/cast [skill_energy:物化天行<2] 木落雁归")
+
+        self.textEditScript3.clear()
+        self.textEditInstruct1.clear()
+        self.textEditInstruct1.append("地宏")
+        self.textEditInstruct2.clear()
+        self.textEditInstruct2.append("天宏")
         self.textEditInstruct3.clear()
 
     def YJScript(self):
@@ -373,6 +405,26 @@ class ScriptWindow(QDialog, Ui_Script):
         self.textEditInstruct2.clear()
         self.textEditInstruct3.clear()
 
+    def MWScript(self):
+        self.show()
+        self.textEditScript1.clear()
+        self.textEditScript1.append("/cast 高山流水")
+        self.textEditScript1.append("/cast [skill_energy:疏影横斜>1|buff:孤影化双] 疏影横斜")
+        self.textEditScript1.append("/cast 变宫")
+        self.textEditScript1.append("/fcast 剑·宫")
+
+        self.textEditScript2.clear()
+        self.textEditScript2.append("/fcast 阳春白雪")
+        self.textEditScript2.append("/cast 疏影横斜")
+        self.textEditScript2.append("/cast [nobuff:清绝影歌] 清绝影歌")
+
+        self.textEditScript3.clear()
+        self.textEditInstruct1.clear()
+        self.textEditInstruct1.append("高山一键宏")
+        self.textEditInstruct2.clear()
+        self.textEditInstruct2.append("切剑阳春，清绝影歌好了就用")
+        self.textEditInstruct3.clear()
+
     def ScriptCopy1(self):
         self.textEditScript1.selectAll()
         self.textEditScript1.copy()
@@ -399,6 +451,7 @@ if __name__ == "__main__":
     mainWin.pushButtonJY.clicked.connect(scriptWin.JYScript)
     mainWin.pushButtonGB.clicked.connect(scriptWin.GBScript)
     mainWin.pushButtonTCT.clicked.connect(scriptWin.TCTScript)
+    mainWin.pushButtonPL.clicked.connect(scriptWin.PLScript)
     mainWin.pushButtonYJ.clicked.connect(scriptWin.YJScript)
     mainWin.pushButtonHST.clicked.connect(scriptWin.HSTScript)
     mainWin.pushButtonBX.clicked.connect(scriptWin.BXScript)
@@ -408,5 +461,6 @@ if __name__ == "__main__":
     mainWin.pushButtonDJ.clicked.connect(scriptWin.DJScript)
     mainWin.pushButtonQC.clicked.connect(scriptWin.QCScript)
     mainWin.pushButtonTL.clicked.connect(scriptWin.TLScript)
+    mainWin.pushButtonMW.clicked.connect(scriptWin.MWScript)
 
     sys.exit(app.exec_())

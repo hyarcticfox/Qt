@@ -13,12 +13,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Script(object):
     def setupUi(self, Script):
         Script.setObjectName("Script")
-        Script.resize(603, 447)
+        Script.resize(598, 604)
         self.pushButtonCopy_1 = QtWidgets.QPushButton(Script)
         self.pushButtonCopy_1.setGeometry(QtCore.QRect(480, 100, 75, 23))
         self.pushButtonCopy_1.setObjectName("pushButtonCopy_1")
         self.layoutWidget = QtWidgets.QWidget(Script)
-        self.layoutWidget.setGeometry(QtCore.QRect(320, 40, 141, 381))
+        self.layoutWidget.setGeometry(QtCore.QRect(320, 40, 141, 401))
         self.layoutWidget.setObjectName("layoutWidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -36,7 +36,7 @@ class Ui_Script(object):
         self.pushButtonCopy_2.setGeometry(QtCore.QRect(480, 220, 75, 23))
         self.pushButtonCopy_2.setObjectName("pushButtonCopy_2")
         self.layoutWidget_2 = QtWidgets.QWidget(Script)
-        self.layoutWidget_2.setGeometry(QtCore.QRect(50, 40, 211, 381))
+        self.layoutWidget_2.setGeometry(QtCore.QRect(50, 40, 251, 401))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget_2)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -53,6 +53,9 @@ class Ui_Script(object):
         self.pushButtonCopy_3 = QtWidgets.QPushButton(Script)
         self.pushButtonCopy_3.setGeometry(QtCore.QRect(480, 350, 75, 23))
         self.pushButtonCopy_3.setObjectName("pushButtonCopy_3")
+        self.textTalent = QtWidgets.QTextBrowser(Script)
+        self.textTalent.setGeometry(QtCore.QRect(50, 460, 501, 101))
+        self.textTalent.setObjectName("textTalent")
 
         self.retranslateUi(Script)
         QtCore.QMetaObject.connectSlotsByName(Script)
