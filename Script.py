@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Script(object):
     def setupUi(self, Script):
         Script.setObjectName("Script")
-        Script.resize(598, 604)
+        Script.resize(598, 597)
         self.pushButtonCopy_1 = QtWidgets.QPushButton(Script)
         self.pushButtonCopy_1.setGeometry(QtCore.QRect(480, 100, 75, 23))
         self.pushButtonCopy_1.setObjectName("pushButtonCopy_1")
@@ -54,8 +54,11 @@ class Ui_Script(object):
         self.pushButtonCopy_3.setGeometry(QtCore.QRect(480, 350, 75, 23))
         self.pushButtonCopy_3.setObjectName("pushButtonCopy_3")
         self.textTalent = QtWidgets.QTextBrowser(Script)
-        self.textTalent.setGeometry(QtCore.QRect(50, 460, 501, 101))
+        self.textTalent.setGeometry(QtCore.QRect(50, 470, 501, 101))
         self.textTalent.setObjectName("textTalent")
+        self.label = QtWidgets.QLabel(Script)
+        self.label.setGeometry(QtCore.QRect(50, 450, 72, 15))
+        self.label.setObjectName("label")
 
         self.retranslateUi(Script)
         QtCore.QMetaObject.connectSlotsByName(Script)
@@ -66,3 +69,4 @@ class Ui_Script(object):
         self.pushButtonCopy_1.setText(_translate("Script", "复制"))
         self.pushButtonCopy_2.setText(_translate("Script", "复制"))
         self.pushButtonCopy_3.setText(_translate("Script", "复制"))
+        self.label.setText(_translate("Script", "奇穴："))

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>便携式宏库V1.0 by 幻夜白狼</string>
+   <string>便携式宏库V1.11 by 幻夜白狼</string>
   </property>
   <widget class="Line" name="line">
    <property name="geometry">
