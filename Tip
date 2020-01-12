@@ -19,3 +19,15 @@ if __name__ == "__main__":
 import sys, os
 if hasattr(sys, 'frozen'):
     os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']    
+
+
+
+程序显示图标了，但是点进去，图标没了解决方法
+<RCC>
+  <qresource prefix="/">
+    <file>xxxx.ico</file>
+  </qresource>
+</RCC>
+用pyRcc生成py文件
+import xxxx
+MainWindow.setWindowIcon(QIcon(':/xxxx.ico'))
