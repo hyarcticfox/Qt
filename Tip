@@ -20,6 +20,16 @@ import sys, os
 if hasattr(sys, 'frozen'):
     os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']    
 
+Pycharm下QT工具加入
+QtDesigner:
+Settings-Tools-External Tools 添加：Name QtDesigner  Group Qt（随意）  
+Program: QtDesigner所在路径   Working Directory: $ProjectFileDir$
+Pyuic:
+Settings-Tools-External Tools 添加：Name Pyuic  Group Qt（随意）  
+Program: python.exe所在路径  Arguments: -m PyQt5.uic.pyuic $FileName$ -o $FileNameWithoutExtension$.py     Working Directory: $FileDir$
+PyRcc:
+Settings-Tools-External Tools 添加：Name PyRcc  Group Qt（随意）  
+Program: pyrcc5.exe所在路径  Arguments: $FileName$ -o $FileNameWithoutExtension$_rc.py     Working Directory: $FileDir$
 
 
 程序显示图标了，但是点进去，图标没了解决方法
